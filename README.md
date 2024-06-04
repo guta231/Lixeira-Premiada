@@ -34,7 +34,7 @@ Em relação à Lixeira Premiada, o objetivo é utilizar a recompensa para chama
 Para a simulação no wokwi, foi necessário uma adaptação do produto para que seja usar potenciometros para emular um sensor de cores RGB para a classificação dos plásticos, já que não possui sensor NIR para melhor performance.
 
 ### Simulação no Wokwi
-![Simulação Wokwi](Lixeira-Premiada/Imagem Wokwi.png)
+![Simulação Wokwi](https://github.com/guta231/Lixeira-Premiada/blob/075f05077a734472cf0e08aefe56ee64ef13d5b1/Imagem%20Wokwi.png)
 
 [Clique aqui para ver a simulação](https://wokwi.com/projects/399712715530419201)
 
