@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "author": "Gustavo Henrique",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 83.4, "left": 290.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -10.9, "left": 326.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -10.9, "left": 431.8, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot3", "top": -10.9, "left": 537.4, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -89.6,
+      "left": 677.6,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 172.2,
+      "left": 396.6,
+      "rotate": 90,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-hx711", "id": "cell1", "top": 233, "left": 89, "attrs": { "type": "5kg" } }
+  ],
+  "connections": [
+    [ "btn1:1.l", "bb1:14t.d", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:12t.d", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:14b.i", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:12b.i", "", [ "$bb" ] ],
+    [ "bb1:tn.2", "uno:GND.3", "black", [ "v0" ] ],
+    [ "bb1:tp.1", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:GND", "bb1:tn.3", "black", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "pot1:VCC", "bb1:tp.5", "red", [ "v0" ] ],
+    [ "pot2:GND", "bb1:tn.12", "black", [ "v0" ] ],
+    [ "pot2:SIG", "uno:A1", "#8f4814", [ "v0" ] ],
+    [ "pot2:VCC", "bb1:tp.14", "red", [ "v0" ] ],
+    [ "pot3:GND", "bb1:tn.21", "black", [ "v0" ] ],
+    [ "pot3:SIG", "uno:A2", "blue", [ "v0" ] ],
+    [ "pot3:VCC", "bb1:tp.23", "red", [ "v0" ] ],
+    [ "lcd1:GND", "bb1:tn.26", "black", [ "h0" ] ],
+    [ "lcd1:VCC", "bb1:tp.28", "red", [ "h0" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h0" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h0" ] ],
+    [ "bb1:14t.c", "bb1:tn.10", "black", [ "v0" ] ],
+    [ "bb1:12t.c", "uno:7", "purple", [ "v0" ] ],
+    [ "cell1:VCC", "bb1:tp.2", "red", [ "h0" ] ],
+    [ "cell1:GND", "bb1:tn.5", "black", [ "h0" ] ],
+    [ "cell1:DT", "uno:3", "gold", [ "h0" ] ],
+    [ "cell1:SCK", "uno:2", "orange", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
